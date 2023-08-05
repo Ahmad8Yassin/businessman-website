@@ -2,9 +2,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="style.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <title>khaled portfolio</title>
     </head>
     
@@ -12,14 +11,14 @@
     <body>
         <header class="header">
             <nav class="navbar">
-                <a href="#" class="active ">Home</a>
-                <a href="#">About</a>
-                <a href="#">Works</a>
+                <a href="#home" class="homee active" onclick="activeStr(1)">Home</a>
+                <a href="#about" class="abouut" onclick="activeStr(2)">About</a>
+                <a href="#works" class="work" onclick="activeStr(3)">Works</a>
             </nav>
-            <a href="#" class="contact-a">Contact</a>
+            <a href="#contact-page" class="contact-a">Contact</a>
         </header>
-        
-        <section class="home">
+        <!-- Home Page -->
+        <section class="home" id="home">
             <div class="home-content">
                 <h1>Welcome i'm khaled and</h1>
                 <h3>I'm business man</h3>
@@ -33,11 +32,111 @@
             <div class="home-img">
                 <div class="rhomebus">
                     <div class="box-full"></div>
-                    <img src="img.png" alt="">
+                    <img src="img/img.png" alt="">
                     <div class="box-outline"></div>
                 </div>
             </div>
         </section>
-        <div class="bottom-bar"></div>
+        <section class="about" id="about">
+            <!-- About page 1 -->
+            <div class="box-full"></div>
+        <div class="para1">
+            <h1>My start in</h1>
+            <h3>business world</h3>
+            <p>Khalid is an individual with a profound understanding of the business world, and he fondly shares the story of his entrepreneurial journey.
+                His venture began with a bold vision and a determination to make a positive impact in his industry. Starting as a young entrepreneur, Khalid faced various challenges, from securing funding to building a strong team.
+                However, his unwavering commitment and innovative mindset fueled his progress.
+            </p>
+        </div>
+        <div class="box-outline"></div>
+            <!-- About page 2 -->
+        <div class="para2">
+            <p>
+                In the early days of his business, Khalid focused on refining his products and services, continually seeking feedback from customers to improve and exceed their expectations.
+                As he navigated the complexities of the market, he embraced the philosophy of adaptability and stayed agile in response to changing trends.
+                Khalid's relentless drive to innovate and his ability to learn from both successes and setbacks became instrumental in the growth and success of his business.
+            </p>
+            <p>
+                Today, Khalid's entrepreneurial journey is a testament to the transformative power of passion, resilience, and a customer-centric approach. His inspiring story serves as a beacon of hope for aspiring entrepreneurs,
+                illustrating that with a clear vision and dedication, even the most ambitious dreams can become a reality in the world of business.
+            </p>
+        </div>
+        </section>
+        <!-- About Page End -->
+        <section class="works" id="works">
+            <h4 class="title">My Works</h4>
+        <div class="work-grid">
+            <!--Card One-->
+        <div class="full-card">
+            <div class="work-card">
+                <div class="box-full c1f"></div>
+                <img src="img/ai.jpg" alt="">
+                <div class="box-outline c1o"></div>
+            </div>
+            <div class="box-texts"><h4>AI-powered robots</h4></div>
+        </div>
+        <!--End-->
+        <!--Card Two-->
+        <div class="full-card">
+            <div class="work-card">
+                <div class="box-full c2f"></div>
+                <img src="img/app.jpg" alt="">
+                <div class="box-outline c2o"></div>
+            </div>
+            <div class="box-texts"><h4>Phone Service Apps</h4></div>
+        </div>
+        <!--End-->
+        <!--Card Three-->
+        <div class="full-card">
+            <div class="work-card">
+                <div class="box-full c3f"></div>
+                <img src="img/office.jpg" alt="">
+                <div class="box-outline c3o"></div>
+            </div>
+            <div class="box-texts"><h4>Offices for rent</h4></div>
+        </div>
+        <!--End-->
+        </div>
+        </section>
+        <!--Works Page End-->
+
+        <!--Contact Page-->
+        <section class="contact-page" id="contact-page">
+            <div>
+                <h4>Contact with me</h4>
+            </div>
+            <form action="">
+                <label for=""><input class="email-input" type="email" placeholder="Enter Your Email"></label>
+                <label for=""><input class="topic-input" type="text" placeholder="Enter The topic"></label>
+                <label for=""><textarea class="message-input" cols="30" rows="10" placeholder="Enter The Message"></textarea></label>
+                <label for=""><input class="submit" type="submit" value="submit"></label>
+            </form>
+        </section>
+
+        <!--JavaScript and jQurey-->
+        <script>
+            function activeStr (strNum){
+            if (strNum == 1){
+                $(document).ready(function(){
+                $(".homee").addClass("active");
+                $(".abouut").removeClass("active");
+                $(".work").removeClass("active");
+            });
+            }
+            if (strNum == 2){
+                $(document).ready(function(){
+                $(".homee").removeClass("active");
+                $(".abouut").addClass("active");
+                $(".work").removeClass("active");
+            });
+            }
+            if (strNum == 3){
+                $(document).ready(function(){
+                $(".homee").removeClass("active");
+                $(".abouut").removeClass("active");
+                $(".work").addClass("active");
+            });}
+    }
+        </script>
     </body>
 </html>
