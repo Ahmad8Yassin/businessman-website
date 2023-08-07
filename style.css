@@ -118,8 +118,8 @@ body {
     display: inline-block;
     padding: 10px 28px;
     background: #8E6339;
-    border: 2px solid #8E6339;
-    border-radius: 6px;
+    border: 5px solid #8E6339;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     font-size: 16px;
     color: #eaeaea;
@@ -210,6 +210,14 @@ body {
     position: absolute;
 }
 
+.contact-page .c4f {
+    right: 750px;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
 
 
 /*End*/
@@ -254,6 +262,15 @@ body {
     height: 170px;
     position: absolute;
 }
+
+.contact-page .c4o {
+    left: 750px;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
 
 /*End*/
 
@@ -370,13 +387,20 @@ body {
     padding: 50px 8% 0;
     overflow: hidden;
     flex-direction: column;
+    justify-content: center;
+}
+
+.contact-page div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .contact-page .email-input,
 .contact-page .topic-input,
 .contact-page .message-input {
     padding: 7px;
-    width: 400px;
+    width: 500px;
     background-color: transparent;
     border: 5px solid #8E6339;
     border-radius: 20px;
@@ -400,14 +424,14 @@ body {
     background-color: #8E6339;
     border-radius: 10px;
     color: white;
-    width: 400px;
+    width: 500px;
     height: 40px;
     border: none;
     cursor: pointer;
 }
 
 .contact-page .submit:hover {
-    background-color: white;
+    background-color: transparent;
     color: #8E6339;
     border: 5px solid #8E6339;
 }
@@ -417,11 +441,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 500px;
+    height: 360px;
 }
 
 .contact-page h4 {
-    font-size: 40px;
+    font-size: 70px;
     color: #8E6339;
 }
